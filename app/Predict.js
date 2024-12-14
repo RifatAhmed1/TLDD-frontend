@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Button, Input, TextField, Typography } from "@mui/material";
-import React from "react"
 import {useState} from "react"
 
 export default function ImageUpload(){
@@ -18,7 +17,8 @@ export default function ImageUpload(){
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         setFile(file);
-        setPreviewUrl(URL.createObjectURL(file));
+        if (file)
+            {setPreviewUrl(URL.createObjectURL(file));}
     }
     
     const handleSubmit = async (e) => {
@@ -88,13 +88,13 @@ export default function ImageUpload(){
                     {isLoading? "Submitting..." : "Submit"}
                 </Button>
             </Box>
-            <Box>
+            <Box sx={{marginTop: 4}}>
                 {prediction && 
                     <Box 
                         sx={{display: "flex", justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}
                     >
-                        <Typography variant="body1">Prediction: fgsfdgsd{prediction}</Typography>
-                        <Typography variant="body1">Probability: adfadsf{probability}</Typography>
+                        <Typography variant="body1"><b>Prediction:</b> {prediction}</Typography>
+                        <Typography variant="body1"><b>Probability:</b> {probability}</Typography>
                     </Box>
                 }
             </Box>

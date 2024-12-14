@@ -1,5 +1,6 @@
 import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material'
 import React from 'react'
+import About from './about'
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
             <Toolbar>
                 <Button sx={{color: 'white'}}>Logo</Button>
                 <Box flexGrow={1}/>
-                <Button sx={{color: 'white'}}>About</Button>
+                <About/>
             </Toolbar>
         </AppBar>
     </Box>
