@@ -4,6 +4,7 @@ import ImageUpload from "./predict";
 import { Box, Container, Typography } from "@mui/material";
 import Header from './header';
 import Footer from "./footer";
+import PhotoClicker from "./capture";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
       </Box>
       <Container>
         <ImageUpload/>
+        <PhotoClicker/>
       </Container>
+      <div style={{height: 100}}/>
       <Footer/>
     </>
   );

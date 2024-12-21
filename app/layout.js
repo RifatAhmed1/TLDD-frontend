@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import {Roboto} from "next/font/google";
 import "./globals.css";
 
+import {AppRouterCacheProvider} from "@mui/material-nextjs/v15-appRouter";
+
 const roboto = Roboto({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
@@ -24,12 +26,14 @@ export const metadata = {
   title: "Tomato Leaf Disease Dectector",
   description: "Detects diseases in tomato leaf using AI",
 };
-
+// /*`${roboto.className} ${geistSans.variable} ${geistMono.variable}`*/
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className/*`${roboto.className} ${geistSans.variable} ${geistMono.variable}`*/}>
-        {children}
+      <body className={roboto.className}>
+        <AppRouterCacheProvider>
+          {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
