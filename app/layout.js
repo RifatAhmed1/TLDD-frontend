@@ -2,11 +2,16 @@ import localFont from "next/font/local";
 import {Roboto} from "next/font/google";
 import "./globals.css";
 
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { ThemeProvider } from "@mui/material";
+import theme from "@/theme";
+
 const roboto = Roboto({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
+  weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   display: 'swap',
+  variable: '--font-roboto',
 })
 
 const geistSans = localFont({
@@ -29,7 +34,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className/*`${roboto.className} ${geistSans.variable} ${geistMono.variable}`*/}>
-        {children}
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            {children}
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
