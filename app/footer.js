@@ -1,13 +1,33 @@
-import { AppBar, Box, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material'
 import React from 'react'
+
+const StyledRoot = (props) => {
+  const { children, ...rest } = props;
+
+  const boxStyle = {
+    backgroundColor: "secondary.main",
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
+    maxHeight: 100
+  }
+
+  const containerStyle = {
+    flexGrow: 1
+  }
+  return (
+    <Box {...rest} sx={boxStyle}>
+      <Container sx={containerStyle}>
+        { children }
+      </Container>
+    </Box>
+  );
+};
 
 export default function Footer() {
   return (
-    <AppBar position='fixed' sx={{top: 'auto', bottom:0, minHeight: 36, backgroundColor: '#1E1E1E',}}>
-        <Toolbar>
-            <Box flexGrow={1}><Typography variant='body2' sx={{color: 'white', textAlign: 'center'}}>Developed by Rifat Ahmed</Typography>
-            </Box>
-        </Toolbar>
-    </AppBar>
+    <StyledRoot>
+        <Typography sx={{color: "primary.main"}}>Developed by Rifat</Typography>
+    </StyledRoot>
   )
 }
