@@ -73,13 +73,13 @@ const StyledDiagnose = () => {
               <Box sx={{width: 40, height: 40, bgcolor: 'primary.main', marginRight: 2, borderRadius: 999}}>
                 <Typography variant="h5" textAlign={'center'} fontWeight={'bold'}>3</Typography>
               </Box>
-              <Typography variant="h5">Upload photo by clicking on the "Submit" button</Typography>
+              <Typography variant="h5">Upload photo by clicking on the &quot;Submit&quot; button</Typography>
             </Box>
             <Box sx={{display: 'flex', flexDirection: 'row', marginBottom: 1}}>
               <Box sx={{width: 40, height: 40, bgcolor: 'primary.main', marginRight: 2, borderRadius: 999}}>
                 <Typography variant="h5" textAlign={'center'} fontWeight={'bold'}>4</Typography>
               </Box>
-              <Typography variant="h5">That'it! Now you know the issue and how to cure it</Typography>
+              <Typography variant="h5">That&apos;it! Now you know the issue and how to cure it</Typography>
             </Box>
           </Box>
         </Grid2>
