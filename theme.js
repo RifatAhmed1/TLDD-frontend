@@ -4,12 +4,20 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
     typography: {
+        h1:{
+            fontFamily: 'var(--font-nunito)',
+            textTransform: 'none',
+        },
+        h2:{
+            fontFamily: 'var(--font-nunito)',
+            textTransform: 'none',
+        },
         h3:{
             fontFamily: 'var(--font-nunito)',
             textTransform: 'none',
         },
         h4: {
-            fontFamily: 'var(--font-robot)',
+            fontFamily: 'var(--font-nunito)',
             textTransform: 'none',
         }, 
         h5: {

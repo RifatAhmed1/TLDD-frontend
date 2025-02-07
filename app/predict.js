@@ -58,19 +58,17 @@ export default function ImageUpload(){
     };
 
     return(
-        <Box 
-            sx={{marginTop: 8}}
-        >
+        <Box>
             <Box 
                 component={"form"} 
                 sx={{display: 'flex', flexDirection: {xs:'column'}, justifyContent: 'center', alignItems:'center'}} 
                 onSubmit={handleSubmit}
             >
-                {file ? <div>{file.name}</div> : <div>Upload your tomato leaf image</div>}
+                {file && <div>{file.name}</div>}
                 <Button 
                     onClick={handleFileClick}
                 >
-                    {previewUrl ? <div><img src={previewUrl} height={200} width={200}/></div>:<div><img src={"./no-image.jpg"} height={200} width={200}/></div>}
+                    {previewUrl ? <div><img src={previewUrl} height={224} width={224} /></div>:<div><img src={"no-image.jpg"} height={224} width={224}/></div>}
                 </Button>
                 <input 
                     type="file" 

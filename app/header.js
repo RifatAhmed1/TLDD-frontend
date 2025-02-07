@@ -9,7 +9,7 @@ export default function Header() {
           <Container>
             <Toolbar>
                 <Button variant='text' sx={{color: 'primary.main'}}>
-                  <Typography variant='h3'>
+                  <Typography variant='h3' fontWeight={'bold'}>
                     LeafLens
                   </Typography>
                 </Button>
@@ -17,7 +17,6 @@ export default function Header() {
                 <Button variant='outlined'><Typography variant='h5'>Library</Typography></Button>
                 <Button variant='outlined'><Typography variant='h5'>Sign In</Typography></Button>
                 <Button variant='outlined'><Typography variant='h5'>Try Now</Typography></Button>
-                <About/>
             </Toolbar>
           </Container>
         </AppBar>
