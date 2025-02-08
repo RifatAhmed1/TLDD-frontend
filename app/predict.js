@@ -57,8 +57,17 @@ export default function ImageUpload(){
         }
     };
 
+
+    const rootStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1
+    }
+
     return(
-        <Box>
+        <Box sx={rootStyle}>
             <Box 
                 component={"form"} 
                 sx={{display: 'flex', flexDirection: {xs:'column'}, justifyContent: 'center', alignItems:'center'}} 
@@ -68,7 +77,7 @@ export default function ImageUpload(){
                 <Button 
                     onClick={handleFileClick}
                 >
-                    {previewUrl ? <div><img src={previewUrl} height={224} width={224} /></div>:<div><img src={"no-image.jpg"} height={224} width={224}/></div>}
+                    {previewUrl ? <div><img src={previewUrl} style={{borderRadius: 12}} height={224} width={224} /></div>:<div><img src={"no-image.jpg"} style={{borderRadius: 12}} height={224} width={224}/></div>}
                 </Button>
                 <input 
                     type="file" 
@@ -79,11 +88,13 @@ export default function ImageUpload(){
                 />
                 <Button 
                     variant="contained" 
-                    sx={{display: 'flex', flexGrow: 0}} 
+                    sx={{borderRadius: 8, '&:hover': {bgcolor: 'primary.main'}}} 
                     type="submit" 
                     disabled={isLoading}
-                >
-                    {isLoading? "Submitting..." : "Submit"}
+                >  
+                    <Typography variant="h5" color="white">
+                        {isLoading? "Submitting..." : "Submit"}
+                    </Typography>
                 </Button>
             </Box>
             <Box sx={{marginTop: 4}}>

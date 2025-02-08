@@ -1,8 +1,8 @@
 'use client';
 
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-const theme = createTheme({
+let theme = createTheme({
     typography: {
         h1:{
             fontFamily: 'var(--font-nunito)',
@@ -35,5 +35,7 @@ const theme = createTheme({
         }
     }
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;

@@ -32,10 +32,10 @@ const StyledRoot = (props) => {
 export default function Footer() {
   return (
     <StyledRoot>
-        <Typography variant='body1' sx={{color: 'white'}}>This is a portfolio project (MVP). Some features are currently in development</Typography>
-        <Typography variant='body1' sx={{color: 'white'}}>Tools and Technologies used:</Typography>
-        <Typography variant='body1' sx={{color: 'white'}}>TensorFlow, Keras, Next.js, MUI, FastAPI</Typography>
-        <Typography variant={'body1'} sx={{color: "white"}}><a href='https://www.github.com/rifatahmed1'>&copy; Developed by Rifat Ahmed</a></Typography>
+        <Typography variant='body1' textAlign={"center"} sx={{color: 'white'}}>This is a portfolio project (MVP)<br/> Some features are currently in development</Typography>
+        <Typography variant='body1' textAlign={"center"} sx={{color: 'white'}}>Tools and Technologies used:</Typography>
+        <Typography variant='body1' textAlign={"center"} sx={{color: 'white'}}>TensorFlow, Keras, Next.js, MUI, FastAPI</Typography>
+        <Typography variant={'body1'} textAlign={"center"} sx={{color: "white"}}><a href='https://www.github.com/rifatahmed1'>&copy; Developed by Rifat Ahmed</a></Typography>
     </StyledRoot>
   )
 }

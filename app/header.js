@@ -1,10 +1,10 @@
 import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material'
 import React from 'react'
-import About from './about'
+import MobileMenu from './mobileMenu'
 
 export default function Header() {
   return (
-    <Box sx={{display: 'flex'}}>
+    <Box sx={{display: 'flex', borderBottom: '2px solid', borderColor: 'primary.main'}}>
         <AppBar position='sticky' sx={{backgroundColor: "white", boxShadow: 'none'}}>
           <Container>
             <Toolbar>
@@ -14,9 +14,10 @@ export default function Header() {
                   </Typography>
                 </Button>
                 <Box flexGrow={1}/>
-                <Button variant='outlined'><Typography variant='h5'>Library</Typography></Button>
-                <Button variant='outlined'><Typography variant='h5'>Sign In</Typography></Button>
-                <Button variant='outlined'><Typography variant='h5'>Try Now</Typography></Button>
+                <Button variant='text' sx={{marginLeft: 2, display: {xs: 'none', md: 'block'}}}><Typography variant='h5'>Library</Typography></Button>
+                <Button variant='text' sx={{marginLeft: 2, display: {xs: 'none', md: 'block'}}}><Typography variant='h5'>Sign In</Typography></Button>
+                <Button variant='text' href='#diagnose' sx={{marginLeft: 2, display: {xs: 'none', md: 'block'}}}><Typography variant='h5'>Try Now</Typography></Button>
+                <MobileMenu/>
             </Toolbar>
           </Container>
         </AppBar>
